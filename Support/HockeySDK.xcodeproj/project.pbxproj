@@ -14,22 +14,9 @@
 				1E4F61ED1621ADE70033EFC5 /* Build universal embedded framework */,
 			);
 			dependencies = (
-				846A906B1B20D4BB0076BB80 /* PBXTargetDependency */,
 			);
 			name = "HockeySDK Distribution";
 			productName = "HockeySDK Framework";
-		};
-		1E8E66AD15BC3D7700632A2E /* HockeySDK Documentation */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1E8E66B015BC3D7700632A2E /* Build configuration list for PBXAggregateTarget "HockeySDK Documentation" */;
-			buildPhases = (
-				1E8E66B215BC3D8200632A2E /* ShellScript */,
-			);
-			dependencies = (
-				F84D04411F0D1D92004161BC /* PBXTargetDependency */,
-			);
-			name = "HockeySDK Documentation";
-			productName = Documentation;
 		};
 /* End PBXAggregateTarget section */
 
@@ -426,20 +413,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E59550915B6F45800A03429;
 			remoteInfo = HockeySDKResources;
-		};
-		846A906A1B20D4BB0076BB80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4005611148D79B500EB22B9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E8E66AD15BC3D7700632A2E;
-			remoteInfo = "HockeySDK Documentation";
-		};
-		F84D04401F0D1D92004161BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4005611148D79B500EB22B9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1EB6173E1B0A30480035A986;
-			remoteInfo = "HockeySDK Framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1595,7 +1568,6 @@
 				1E59550915B6F45800A03429 /* HockeySDKResources */,
 				1EB6173E1B0A30480035A986 /* HockeySDK Framework */,
 				1EB617481B0A30480035A986 /* HockeySDK FrameworkTests */,
-				1E8E66AD15BC3D7700632A2E /* HockeySDK Documentation */,
 				1E4F61E91621AD970033EFC5 /* HockeySDK Distribution */,
 				803BB529217EE85000BE92C9 /* HockeySDK TestTarget */,
 			);
@@ -1706,19 +1678,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd ${SRCROOT}\n\n./HockeySDKDistribution.sh";
-		};
-		1E8E66B215BC3D8200632A2E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#cd -> https://github.com/realm/jazzy/issues/772\ncd ../Documentation/HockeySDK\njazzy\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1921,16 +1880,6 @@
 			isa = PBXTargetDependency;
 			target = 1E59550915B6F45800A03429 /* HockeySDKResources */;
 			targetProxy = 1EB618191B0A3C380035A986 /* PBXContainerItemProxy */;
-		};
-		846A906B1B20D4BB0076BB80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E8E66AD15BC3D7700632A2E /* HockeySDK Documentation */;
-			targetProxy = 846A906A1B20D4BB0076BB80 /* PBXContainerItemProxy */;
-		};
-		F84D04411F0D1D92004161BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1EB6173E1B0A30480035A986 /* HockeySDK Framework */;
-			targetProxy = F84D04401F0D1D92004161BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2191,15 +2140,6 @@
 			};
 			name = ReleaseCrashOnlyExtensions;
 		};
-		1E27E6121B74F03000192AE2 /* ReleaseCrashOnlyExtensions */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = ReleaseCrashOnlyExtensions;
-		};
 		1E27E6131B74F03000192AE2 /* ReleaseCrashOnlyExtensions */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2394,15 +2334,6 @@
 			};
 			name = ReleaseCrashOnly;
 		};
-		1E7DE39319D44D88009AB8E5 /* ReleaseCrashOnly */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = ReleaseCrashOnly;
-		};
 		1E7DE39419D44D88009AB8E5 /* ReleaseCrashOnly */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2410,24 +2341,6 @@
 				PRODUCT_NAME = HockeySDK.framework;
 			};
 			name = ReleaseCrashOnly;
-		};
-		1E8E66AE15BC3D7700632A2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1E8E66AF15BC3D7700632A2E /* ReleaseDefault */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = ReleaseDefault;
 		};
 		1EB617531B0A30480035A986 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3214,15 +3127,6 @@
 			};
 			name = ReleaseFeedbackOnly;
 		};
-		B22DFC071FC750FF0052AF19 /* ReleaseFeedbackOnly */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = ReleaseFeedbackOnly;
-		};
 		B22DFC081FC750FF0052AF19 /* ReleaseFeedbackOnly */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3437,15 +3341,6 @@
 			};
 			name = Release;
 		};
-		B298554A1D85EBC9007FF452 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_THUMB_SUPPORT = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		B298554B1D85EBC9007FF452 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3595,19 +3490,6 @@
 				1E7DE39219D44D88009AB8E5 /* ReleaseCrashOnly */,
 				1E27E60F1B74F03000192AE2 /* ReleaseCrashOnlyExtensions */,
 				B22DFC041FC750FF0052AF19 /* ReleaseFeedbackOnly */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E8E66B015BC3D7700632A2E /* Build configuration list for PBXAggregateTarget "HockeySDK Documentation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E8E66AE15BC3D7700632A2E /* Debug */,
-				1E8E66AF15BC3D7700632A2E /* ReleaseDefault */,
-				B298554A1D85EBC9007FF452 /* Release */,
-				1E7DE39319D44D88009AB8E5 /* ReleaseCrashOnly */,
-				1E27E6121B74F03000192AE2 /* ReleaseCrashOnlyExtensions */,
-				B22DFC071FC750FF0052AF19 /* ReleaseFeedbackOnly */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
